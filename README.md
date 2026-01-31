@@ -1,47 +1,133 @@
-# Rasees Contest Hub (PHP + Supabase)
 
-## 1) تشغيل المشروع على MAMP (زي الطفل 😄)
+1) تشغيل المشروع محليًا (Local Setup)
 
-1. افتح MAMP
-2. شغّل **Apache**
-3. افتح مجلد المشروع وحطه هنا:
-   - `/Applications/MAMP/htdocs/contest-registration/`
-4. افتح المتصفح:
-   - `http://localhost:8888/contest-registration/`
+AR:
+	1.	افتح MAMP
+	2.	شغّل Apache
+	3.	افتح مجلد المشروع وحطه في المسار التالي:
 
-## 2) تجهيز Supabase
+/Applications/MAMP/htdocs/contest-registration/
 
-### A) سوّ جدول البيانات
-1. افتح Supabase
-2. روح: **SQL Editor**
-3. انسخ محتوى الملف:
-   - `supabase_setup.sql`
-4. اضغط **Run**
 
-### B) خذ المفاتيح
-1. Supabase -> **Project Settings** -> **API**
-2. انسخ:
-   - Project URL
-   - anon public key
-   - service_role key (خطير لا تخليه مكشوف)
+	4.	افتح المتصفح وروح للرابط:
 
-### C) حط المفاتيح في المشروع
+http://localhost:8888/contest-registration/
+
+
+
+EN:
+	1.	Open MAMP
+	2.	Start Apache
+	3.	Place the project folder here:
+
+/Applications/MAMP/htdocs/contest-registration/
+
+
+	4.	Open your browser and go to:
+
+http://localhost:8888/contest-registration/
+
+
+
+⸻
+
+2) إعداد Supabase (Supabase Setup)
+
+A) إنشاء جدول البيانات (Create Database Table)
+
+AR:
+	1.	افتح Supabase
+	2.	ادخل على SQL Editor
+	3.	انسخ محتوى الملف:
+
+supabase_setup.sql
+
+
+	4.	اضغط Run
+
+EN:
+	1.	Open Supabase
+	2.	Go to SQL Editor
+	3.	Copy the content of:
+
+supabase_setup.sql
+
+
+	4.	Click Run
+
+⸻
+
+B) استخراج المفاتيح (Get API Keys)
+
+AR:
+	1.	Supabase → Project Settings → API
+	2.	انسخ التالي:
+	•	Project URL
+	•	anon public key
+	•	service_role key ⚠️ (خطير – لا تخليه مكشوف)
+
+EN:
+	1.	Supabase → Project Settings → API
+	2.	Copy the following:
+	•	Project URL
+	•	anon public key
+	•	service_role key ⚠️ (Sensitive – never expose it)
+
+⸻
+
+C) ربط المفاتيح بالمشروع (Connect Keys to Project)
+
+AR:
 افتح الملف:
-- `includes/supabase_config.php`
 
-وغيّر:
-- `SUPABASE_URL`
-- `SUPABASE_ANON_KEY`
-- `SUPABASE_SERVICE_KEY`
-- `ADMIN_ACCESS_CODE` (كود دخول الأدمن)
+includes/supabase_config.php
 
-> ملاحظة: لو رفعت المشروع على استضافة، خَلّ المفاتيح في ENV variables أحسن.
+وعدّل القيم التالية:
+	•	SUPABASE_URL
+	•	SUPABASE_ANON_KEY
+	•	SUPABASE_SERVICE_KEY
+	•	ADMIN_ACCESS_CODE (كود دخول الأدمن)
 
-## 3) الروابط
-- الصفحة الرئيسية: `/`
-- تسجيل مشارك: `/user/register.php`
-- لوحة الأدمن: `/admin/login.php`  (تدخل بكود الأدمن)
+EN:
+Open the file:
 
-## 4) Excel
-زر **تحميل Excel** يطلع ملف CSV.
-Excel يفتحه طبيعي.
+includes/supabase_config.php
+
+Update the following values:
+	•	SUPABASE_URL
+	•	SUPABASE_ANON_KEY
+	•	SUPABASE_SERVICE_KEY
+	•	ADMIN_ACCESS_CODE (admin login code)
+
+ملاحظة | Note:
+	•	AR: إذا رفعت المشروع على استضافة، يفضّل تحط المفاتيح في ENV variables
+	•	EN: If deployed online, store keys in environment variables for security
+
+⸻
+
+3) روابط الصفحات (Project Routes)
+
+AR:
+	•	الصفحة الرئيسية: /
+	•	تسجيل مشارك: /user/register.php
+	•	لوحة الأدمن: /admin/login.php (الدخول بكود الأدمن)
+
+EN:
+	•	Home page: /
+	•	User registration: /user/register.php
+	•	Admin panel: /admin/login.php (access via admin code)
+
+⸻
+
+4) ملف Excel (CSV Export)
+
+AR:
+زر تحميل Excel يطلع ملف CSV
+ملف CSV يفتح مباشرة في Excel بدون مشاكل.
+
+EN:
+The Download Excel button generates a CSV file.
+CSV files open normally in Excel.
+
+⸻
+
