@@ -34,7 +34,7 @@
     </section>
 
     <footer class="footer">
-      <small>© Rasees • built with PHP + Supabase</small>
+
     </footer>
   </main>
 </body>
